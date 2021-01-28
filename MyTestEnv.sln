@@ -11,7 +11,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Project2", "Project2\Projec
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D2FC269-91A4-41CA-A5D8-979B8F15CD7F}"
 	ProjectSection(SolutionItems) = preProject
-		README.txt = README.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DS_Graph_Prim", "DS_Graph_Prim\DS_Graph_Prim.vcxproj", "{F1372652-06FF-4396-A416-58A1CA6B2D17}"
