@@ -1,5 +1,6 @@
-#include<iostream>
-
+#include <iostream>
+#include <cstdio>
+#include <array>
 using namespace std;
 
 int main() {
