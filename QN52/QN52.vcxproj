@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d5ee5f75-6190-4ac0-8722-4aeb5688fb5c}</ProjectGuid>
-    <RootNamespace>QN30</RootNamespace>
+    <ProjectGuid>{99717bb2-c69a-4e43-8567-f5a79ea81c90}</ProjectGuid>
+    <RootNamespace>QN52</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="def.cpp" />
-    <ClCompile Include="diction.cpp" />
-    <ClCompile Include="QN30.cpp" />
+    <ClCompile Include="QN52.cpp" />
+    <ClCompile Include="school.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="def.h" />
-    <ClInclude Include="diction.h" />
+    <ClInclude Include="school.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,22 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="QN30.cpp">
+    <ClCompile Include="QN22.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="def.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="diction.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="def.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="diction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
