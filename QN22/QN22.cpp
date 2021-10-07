@@ -1,12 +1,24 @@
 ﻿// QN22.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-// 过程化基础/22. 字符串排序 P46
-
+// 过程化基础/22. 字符串排序 P44
 #include <iostream>
+#include "strarray.h"
+#include <string.h>
+#include <stdlib.h>
+
+using namespace std;
+
+const int Max = 100;
+String stringList[Max];
+int size = 0;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-
+    //std::cout << "Hello World!\n";
+    String s = NULL;
+    while (ReadString(s)) {
+        Insert(stringList, s);
+    }
+    Output(stringList);
     return 0;
 }
 
