@@ -18,13 +18,5 @@
     <ClCompile Include="QN22.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="strarray.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="strarray.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,15 +1,93 @@
 ﻿// QN22.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 // 过程化基础/22. 字符串排序 P44
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include "strarray.h"
+//#include "strarray.h"
 #include <string.h>
 #include <stdlib.h>
+/*
+输入样例：
+I am a student
+I am a teacher
+Hello World
+Good moring
+Good afternoon
+Good evening
+^z
 
+输出样例：
+
+*/
 using namespace std;
+
+// strarray.h
+typedef char* String;
+int ReadString(String& s);// 返回1表示成功读入
+void Insert(String strList[], String& s);
+void Output(String strList[]);
+int Search(String strList[], String& str);
+
 
 const int Max = 100;
 String stringList[Max];
-int size = 0;
+int arrSize = 0;
+
+// strarray.cpp
+using namespace std;
+
+
+int ReadString(String& s)
+{
+    const int bufsize = 100;
+    static char buffer[bufsize];
+    cin.getline(buffer, 100);
+    if (cin.eof())
+        return 0;
+    if (!s) {// 注意，必须是这个！！！
+        delete s;
+    }
+    s = new char[strlen(buffer) + 1];
+    if (!s) {
+        cerr << "内存分配出错！" << endl;
+        return 0;
+    }
+    strcpy(s, buffer);
+    return 1;
+}
+
+void Insert(String strList[], String& s)
+{
+    if (arrSize == Max) {
+        cerr << "数组溢出" << endl;
+        exit(1);
+    }
+    int i, j;
+    i = Search(strList, s);
+    for (j = arrSize - 1; j >= i; j--) {
+        strList[j + 1] = strList[j];
+    }
+    strList[i] = s;
+    arrSize++;
+}
+
+void Output(String strList[])
+{
+    cout << endl << "Sorted string list:" << endl;
+    for (int i = 0; i < arrSize; i++) {
+        cout << strList[i] << endl;
+    }
+}
+
+int Search(String strList[], String& str)
+{
+    for (int i = 0; i < arrSize; i++) {
+        if (strcmp(strList[i], str) > 0) {
+            return i;// found
+        }
+    }
+    return 0;
+}
+
 
 int main()
 {
