@@ -1,71 +1,20 @@
-/*
-@author liuyang
-@since 2021/2/21
+// hello.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+//
 
-数素数
-https://pintia.cn/problem-sets/994805260223102976/problems/994805309963354112
-
-说明：
-使用Eratosthenes
-
-一些调试经验：
-不够用就调大
-内存超标就调小
-对一些不好证明的问题，那就试错就ok。
-
-问题：
-无法打开“cygwin.S”: 无法读取文件'c:\mingw810\src\gcc-8.1.0\libgcc\config\i386\cygwin.S' (Error: 无法解析不存在的文件"c:\mingw810\src\gcc-8.1.0\libgcc\config\i386\cygwin.S")。
-
-处理：
-
-
-参考视频：
-https://www.bilibili.com/video/BV1Ty4y1n7JH?p=15&spm_id_from=pageDriver
-
-输入样例：
-5 27
-输出样例：
-11 13 17 19 23 29 31 37 41 43
-47 53 59 61 67 71 73 79 83 89
-97 101 103
-*/
 #include <iostream>
-using namespace std;
 
-const int MAX_SIZE = 1000001; // 这是个“感觉值”，不够可以再调整。
-int p[MAX_SIZE] = { 0 };
-
-void findPrime(int n, int prime[]) {
-    // int p[MAX_SIZE] = { 0 };
-    int num = 0;// 记录当前已经求得的素数个数
-    for (int i = 2; i < MAX_SIZE; ++i) {
-        if (p[i] == 0) {
-            prime[num++] = i;// 向结果数组写入这个素数
-            if (num >= n) {
-                break;
-            }
-            for (int j = i + i; j < MAX_SIZE; j += i) {// 扫描所有i的倍数
-                p[j] = 1;
-            }
-        }
-    }
-
+int main()
+{
+    std::cout << "Hello World!\n";
 }
 
-int main(int argc, char const *argv[]) {
-    int M, N, count = 0;
-    int prime[10000] = { 0 };
-    cin >> M >> N;
-    findPrime(N, prime);
-    for (int i = M; i <= N; ++i) {
-        cout << prime[i - 1];
-        ++count;
-        if (count % 10 != 0 && i < N) {
-            cout << "  ";
-        }
-        else {
-            cout << endl;
-        }
-    }
-    return 0;
-}
+// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
+// 调试程序: F5 或调试 >“开始调试”菜单
+
+// 入门使用技巧: 
+//   1. 使用解决方案资源管理器窗口添加/管理文件
+//   2. 使用团队资源管理器窗口连接到源代码管理
+//   3. 使用输出窗口查看生成输出和其他消息
+//   4. 使用错误列表窗口查看错误
+//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
+//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件

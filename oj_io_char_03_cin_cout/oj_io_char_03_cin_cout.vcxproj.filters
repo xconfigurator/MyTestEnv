@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="oj_io_char_01.cpp">
+    <ClCompile Include="oj_io_char_03_cin_cout.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
