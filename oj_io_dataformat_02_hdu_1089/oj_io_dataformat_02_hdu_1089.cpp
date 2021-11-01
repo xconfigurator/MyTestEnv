@@ -1,11 +1,21 @@
 ﻿// oj_io_dataformat_02_hdu_1089.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+/*
+输入格式：有多个case输入，直到文件结束;
+输出格式：一行一个结果。
+
+实例：杭电1089
+*/
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    int a, b;
+    ios::sync_with_stdio(false);// 加速cin/cout
+    while (cin >> a >> b) {
+        cout << a + b << endl;
+    }
+    return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

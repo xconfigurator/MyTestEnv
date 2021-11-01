@@ -1,25 +1,21 @@
-﻿// oj_io_dataformat_04_hdu_1091.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// oj_io_dataformat_02_hdu_1089_c.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 /*
-输入格式：每行输入一组case，当case中的数据满足某种情况时退出。
-输出格式：一行一个结果。
+输入格式：有多个case输入，直到文件结束
+输出格式：一行一个结果
 
-实例：杭电1091
+实例：杭电1089
 */
 
-#include <iostream>
-using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
 
 int main() {
-    int a, b;
-
-    while (true) {
-        cin >> a >> b;
-        if (a == 0 && b == 0) {
-            break;
-        }
-        cout << a + b << endl;// 一行一个结果
-    }
-    return 0;
+	int a, b;
+	while (scanf("%d%d", &a, &b) != EOF) {
+		printf("%d\n", a + b);
+	}
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

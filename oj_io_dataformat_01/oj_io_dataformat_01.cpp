@@ -1,11 +1,19 @@
 ﻿// oj_io_dataformat_01.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+/*
+输入格式：一个case输入
+输出格式：一个输出结果
+
+实例：洛谷A + B
+*/
 
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    int a, b;
+    cin >> a >> b;
+    cout << a + b << endl;
+    return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
