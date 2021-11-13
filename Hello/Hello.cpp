@@ -9,6 +9,39 @@ int main()
     // 注意！！！ 提高cin和cout处理速度的方法
     ios::sync_with_stdio(false);// 这样可以提高cin和cout的处理速度。
     std::cout << "Hello World!\n";
+
+    // 202111101000
+    cout << "#202111101000" << endl;
+    int a[] = { -1 , 3, 1, 0, 2, 5, 6 };
+    for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++) {
+        cout << "a[" << i << " ] = " << a[i] << endl;
+        if (!(a[i] == 0)) {
+            cout << "foo" << endl;
+        }
+        else {
+            cout << "bar" << endl;
+        }
+    }
+
+    // 202111101004
+    cout << "#202111101004" << endl;
+    int arr[][3] = { {1}, {3, 2}, {4, 5, 6}, {0}};
+    // TODO 查一下C++怎么输出二维数组
+    /*
+    for (auto &row : arr) {
+        for (auto& col : row) {
+            //cout << "row = " << row << "col = " << col << endl;
+            cout << "row = " << row << "col = " << col << " row[col] = " << row[col] << "\t";
+        }
+        cout << endl;
+    }
+    */
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 3; ++j) {
+            cout << arr[i][j] << "\t";
+        }
+        cout << endl;
+    }
 }
 
 

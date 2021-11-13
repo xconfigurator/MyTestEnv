@@ -90,6 +90,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "datastructure_imooc", "data
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oj_io_dataformat_02_hdu_1089_c", "oj_io_dataformat_02_hdu_1089_c\oj_io_dataformat_02_hdu_1089_c.vcxproj", "{F07E29CD-FD81-4B72-A06F-41DA59A5CB9F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DS_Imooc_Graph_Traverse", "DS_Imooc_Graph_Traverse\DS_Imooc_Graph_Traverse.vcxproj", "{BB3648D5-0B70-4F29-92F8-534C2B6BED17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -322,6 +324,14 @@ Global
 		{F07E29CD-FD81-4B72-A06F-41DA59A5CB9F}.Release|x64.Build.0 = Release|x64
 		{F07E29CD-FD81-4B72-A06F-41DA59A5CB9F}.Release|x86.ActiveCfg = Release|Win32
 		{F07E29CD-FD81-4B72-A06F-41DA59A5CB9F}.Release|x86.Build.0 = Release|Win32
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Debug|x64.ActiveCfg = Debug|x64
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Debug|x64.Build.0 = Debug|x64
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Debug|x86.ActiveCfg = Debug|Win32
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Debug|x86.Build.0 = Debug|Win32
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Release|x64.ActiveCfg = Release|x64
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Release|x64.Build.0 = Release|x64
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Release|x86.ActiveCfg = Release|Win32
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -354,6 +364,7 @@ Global
 		{55607EE5-6997-4BD4-B2D3-01176459CF83} = {366DBC31-15B1-4456-B733-2536F93ADFE4}
 		{7AFA1AAF-6C5C-400B-9D7D-19EEDDEAC523} = {366DBC31-15B1-4456-B733-2536F93ADFE4}
 		{F07E29CD-FD81-4B72-A06F-41DA59A5CB9F} = {366DBC31-15B1-4456-B733-2536F93ADFE4}
+		{BB3648D5-0B70-4F29-92F8-534C2B6BED17} = {71A8E635-B1B8-4053-9A23-DB4B60EAB4FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1F0413F-4898-47FE-A0ED-6F6AE0B58D0B}
