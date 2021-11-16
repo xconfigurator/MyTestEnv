@@ -97,8 +97,12 @@ void CMap::depthFirstTraverse(int nodeIndex)
 // BFS
 void CMap::breadthFirstTraverse(int nodeIndex)
 {
+	// 访问
+	cout << m_pNodeArray[nodeIndex].m_cData << " ";
+	m_pNodeArray[nodeIndex].m_bIsVisited = true;
+
 	// 入队
-	// 如果不想把Queue定义成成员变量，则可以考虑视频中使用的 breadthFirstTraverse中定义，在breadthFirstTraverseimpl中调用的模式。（个人感觉视频里介绍的这种方式更好！）
+	// 如果不想把Queue定义成成员变量，则可以考虑视频中使用的 breadthFirstTraverse中定义，在breadthFirstTraverseimpl中调用的模式。
 	// 这里为了跟浙大视频靠拢，采用定义成员变量Queue的方式
 	m_pBfsQueue->push(nodeIndex);
 
@@ -110,20 +114,18 @@ void CMap::breadthFirstTraverse(int nodeIndex)
 		idx = m_pBfsQueue->front();
 		m_pBfsQueue->pop();
 
-		// 访问
-		cout << m_pNodeArray[idx].m_cData << " ";
-		m_pNodeArray[idx].m_bIsVisited = true;
-
 		// 邻接点（查邻接矩阵）
 		for (int i = 0; i < m_iCapacity; i++) {
 			getValueFromMatrix(idx, i, value);
 			if (value != 0 && !m_pNodeArray[i].m_bIsVisited) {
+				// 访问
+				cout << m_pNodeArray[i].m_cData << " ";
+				m_pNodeArray[i].m_bIsVisited = true;
+				// 入队
 				m_pBfsQueue->push(i);
 			}
 		}
 	}
-
-	// TODO 为啥不对 ??? !!!
 }
 
 bool CMap::getValueFromMatrix(int row, int col, int& val)
