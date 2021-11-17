@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DS_Graph_Prim.cpp">
+    <ClCompile Include="DS_Imooc_Graph_MST_Kruskal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

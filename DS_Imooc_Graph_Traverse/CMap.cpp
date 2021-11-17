@@ -9,14 +9,14 @@ CMap::CMap(int capacity)
 	m_pNodeArray = new Node[m_iCapacity];				// 顶点的数组
 	m_pMatrix = new int[m_iCapacity * m_iCapacity];		// 邻接矩阵的数组
 	memset(m_pMatrix, 0, m_iCapacity * m_iCapacity * sizeof(int));
-	m_pBfsQueue = new queue<int>();						// BFS需要用到的队列
+	//m_pBfsQueue = new queue<int>();						// BFS需要用到的队列
 }
 
 CMap::~CMap()
 {
 	if (NULL != m_pNodeArray) delete[] m_pNodeArray;
 	if (NULL != m_pMatrix) delete[] m_pMatrix;
-	if (NULL != m_pBfsQueue) delete m_pBfsQueue;
+	//if (NULL != m_pBfsQueue) delete m_pBfsQueue;
 }
 
 bool CMap::addNode(Node* pNode)
@@ -94,36 +94,44 @@ void CMap::depthFirstTraverse(int nodeIndex)
 	}
 }
 
-// BFS
+// BFS（BFS实现遵从浙大数据结构视频介绍方法）
 void CMap::breadthFirstTraverse(int nodeIndex)
 {
+	queue<int> q;// 不是递归函数，可以使用局部队列。
+
+	// 访问
+	cout << m_pNodeArray[nodeIndex].m_cData << " ";
+	m_pNodeArray[nodeIndex].m_bIsVisited = true;
+
 	// 入队
-	// 如果不想把Queue定义成成员变量，则可以考虑视频中使用的 breadthFirstTraverse中定义，在breadthFirstTraverseimpl中调用的模式。（个人感觉视频里介绍的这种方式更好！）
-	// 这里为了跟浙大视频靠拢，采用定义成员变量Queue的方式
-	m_pBfsQueue->push(nodeIndex);
+	// 这里为了跟浙大视频靠拢，采用定义成员变量Queue的方式, 视频中采用了另外一种介绍方式。个人以为比较凌乱，就不要再看了。
+	//m_pBfsQueue->push(nodeIndex);
+	q.push(nodeIndex);
 
 	// 遍历队列
 	int idx = 0;
 	int value = 0;
-	while (!m_pBfsQueue->empty()) {
+	//while (!m_pBfsQueue->empty()) {
+	while(!q.empty()) {
 		// 出队
-		idx = m_pBfsQueue->front();
-		m_pBfsQueue->pop();
-
-		// 访问
-		cout << m_pNodeArray[idx].m_cData << " ";
-		m_pNodeArray[idx].m_bIsVisited = true;
+		//idx = m_pBfsQueue->front();
+		//m_pBfsQueue->pop();
+		idx = q.front();
+		q.pop();
 
 		// 邻接点（查邻接矩阵）
 		for (int i = 0; i < m_iCapacity; i++) {
 			getValueFromMatrix(idx, i, value);
 			if (value != 0 && !m_pNodeArray[i].m_bIsVisited) {
-				m_pBfsQueue->push(i);
+				// 访问
+				cout << m_pNodeArray[i].m_cData << " ";
+				m_pNodeArray[i].m_bIsVisited = true;
+				// 入队
+				//m_pBfsQueue->push(i);
+				q.push(i);
 			}
 		}
 	}
-
-	// TODO 为啥不对 ??? !!!
 }
 
 bool CMap::getValueFromMatrix(int row, int col, int& val)
@@ -134,5 +142,6 @@ bool CMap::getValueFromMatrix(int row, int col, int& val)
 
 void CMap::breadthFirstTraverseImpl(vector<int> preVec)
 {
-	// TODO
+	// @deprecated
+	// 没有按照imooc视频里的介绍编写，所以不需要使用这个函数。
 }

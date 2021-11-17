@@ -28,5 +28,5 @@ private:
 	int m_iNodeCount;			// 已添加的顶点个数
 	Node* m_pNodeArray;			// 用来存放顶点数组
 	int* m_pMatrix;				// 用来存放邻接矩阵
-	queue<int>* m_pBfsQueue;		// BFS时使用的queue
+	//queue<int>* m_pBfsQueue;		// BFS时使用的queue, 也可以使用局部队列。
 };

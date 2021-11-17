@@ -42,6 +42,7 @@ int main()
     Node* pNodeH = new Node('H');
     */
     
+    // Vertices
     pMap->addNode(new Node('A'));
     pMap->addNode(new Node('B'));
     pMap->addNode(new Node('C'));
@@ -51,7 +52,8 @@ int main()
     pMap->addNode(new Node('G'));
     pMap->addNode(new Node('H'));
 
-    // 边(无向图)
+    // Edge
+    // 边(无向图 只传入一半即可 这里只传主对角线右上侧三角形)
     pMap->setValueToMatrixForUndirectedGraph(0, 1);
     pMap->setValueToMatrixForUndirectedGraph(0, 3);
     pMap->setValueToMatrixForUndirectedGraph(1, 2);
