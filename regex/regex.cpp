@@ -1,14 +1,18 @@
-// hello.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// regex.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
-#include "sqlite3.h"
+#include <regex>
+#include <bitset>
+#include <sstream>
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    cout << sqlite3_libversion() << endl;
+    //std::cout << "Hello World! regex\n";
+    bitset<16> n = bitset<16>(7);
+    cout << n << endl;
+    cout << n.to_ullong() << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

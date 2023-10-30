@@ -1,14 +1,26 @@
-// hello.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+﻿// ConcurrentTest.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
 #include <iostream>
-#include "sqlite3.h"
+#include <thread>
 using namespace std;
+
+int n = 0; // 全局共享变量
+
+void increase_number() {
+    for (int i = 0; i < 10000000; i++) {
+        n++;
+    }
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    cout << sqlite3_libversion() << endl;
+    std::cout << "Thread!\n";
+    for (int i = 0; i < 10; i++) {
+        std::thread(increase_number);
+    }
+
+    cout << n << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
